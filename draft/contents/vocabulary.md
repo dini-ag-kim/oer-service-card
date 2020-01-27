@@ -200,7 +200,7 @@ Can the application and it's services be used without authentication?
 
 <section data-dfn-for="provider">
 
-### <dfn>providery</dfn>
+### <dfn>provider</dfn>
 
 The provider of the application. This MUST be one or more JSON object with at least a `type` and `name` property. More properties MAY be given, e. g. `email`, `location`, `url`.
 
