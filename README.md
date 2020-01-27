@@ -41,7 +41,7 @@ rechte Spalte) oder die [Kommentarfunktion von GitHub][multi-line comments]
 verwendet werden.
 
 [latest_version]: https://w3id.org/dini-ag-kim/oer-service-card/latest/
-[20200116]: https://w3id.org/dini-ag-kim/oer-service-card/20190309/
+[20190309]: https://w3id.org/dini-ag-kim/oer-service-card/20190309/
 [draft_version]: https://w3id.org/dini-ag-kim/oer-service-card/draft/
 [github]: https://github.com/dini-ag-kim/oer-service-card/
 [multi-line comments]: https://help.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code
