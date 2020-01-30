@@ -1,8 +1,10 @@
-## Glossary
+## Glossar
 
 <dl>
     <dt><abbr title="Application Programming Interface">API</abbr></dt>
     <dd>Application Programming Interface</dd>
+    <dt><abbr title="Bundesministerium für Bildung und Forschung">BMBF</abbr></dt>
+    <dd>Bundesministerium für Bildung und Forschung</dd>
     <dt><abbr title="Dublin Core">DC</abbr></dt>
     <dd>Dublin Core</dd>
     <dt><abbr title="Digital Object Identifier">DOI</abbr></dt>

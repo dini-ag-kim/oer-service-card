@@ -1,21 +1,21 @@
-## Vocabulary
+## Vokabular
 
-The normative vocabularies for service cards are [[schema.org]] and [[LRMI]]. The complete sub-set of properties used for service cards is described in this section.
+Als Vokabular für eine Visitenkarte dienen [[!schema.org]] und [[!LRMI]]. Alle Einträge können auf standardisierte Typen und Properties abgebildet werden.
 
-For each property a short description, the degree if obligation (`mandatory`, `optional`), the data type and - if applicable - the range of allowed values is given.
+Im Folgenden wird die Struktur der Visitenkarte beschrieben. Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt. Wenn erforderlich wird der Wertebereich festgelegt und kurze Beispiele gegeben.
 
 <section data-dfn-for="@context">
 
 ### <dfn>@context</dfn>
 
-This holds the JSON-LD context as a reference. This MUST be `https://schema.org/`.
+Der Link zum JSON-LD-Kontext für das Dokument. MUSS auf `https://schema.org/` gesetzt werden.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
-    <dd>`String` holding one URI</dd>
-    <dt>Values</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`String` (URL)</dd>
+    <dt>Werte</dt>
     <dd>`https://schema.org/`</dd>
 </dl>
 
@@ -25,13 +25,13 @@ This holds the JSON-LD context as a reference. This MUST be `https://schema.org/
 
 ### <dfn>id</dfn>
 
-An URL identifying the service described by the service card. The service card MUST be published at this URL.
+Die URL, durch den der Service identifiziert wird. Das ist in der Regel die Homepage. Auf dieser URL MUSS die Visitenkarte abrufbar sein.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
-    <dd>`String` holding one URL</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`String` (URL)</dd>
 </dl>
 
 </section>
@@ -40,15 +40,15 @@ An URL identifying the service described by the service card. The service card M
 
 ### <dfn>type</dfn>
 
-The type of the application described by the service card. This MUST be `https://schema.org/WebSite` and `https://schema.org/Service`.
+Art der Webseite. MUSS auf `https://schema.org/WebSite` und `https://schema.org/Service` gesetzt werden.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
-    <dd>`String[]` holding one or more URI</dd>
-    <dt>Values</dt>
-    <dd>`https://schema.org/WebSite` and `https://schema.org/Service`</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`String[]` (URL)</dd>
+    <dt>Werte</dt>
+    <dd>`https://schema.org/WebSite` und `https://schema.org/Service`</dd>
 </dl>
 
 </section>
@@ -57,12 +57,12 @@ The type of the application described by the service card. This MUST be `https:/
 
 ### <dfn>name</dfn>
 
-The name of the application or service described by the service card.
+Name des Dienstes.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
     <dd>`String`</dd>
 </dl>
 
@@ -72,15 +72,15 @@ The name of the application or service described by the service card.
 
 ### <dfn>image</dfn>
 
-An icon for the service. This MAY be used by third-party applications implementing the service.
+Icon des Dienstes. KANN genutzt werden, um beispielsweise Suchergebnisse zu kennzeichnen.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String` holding one URL</dd>
-    <dt>Values</dt>
-    <dd>Format: `svg` or `png`<br>Size: 64x64px</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String` (URL)</dd>
+    <dt>Werte</dt>
+    <dd>Dateiformat: `svg` oder `png`<br>Größe: 64x64px</dd>
 </dl>
 
 </section>
@@ -89,13 +89,13 @@ An icon for the service. This MAY be used by third-party applications implementi
 
 ### <dfn>logo</dfn>
 
-A logo for the application or service. This MAY also be the logo of the hosting institution or other provider.
+Logo des Dienstes.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String` holding one URL</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String` (URL)</dd>
 </dl>
 
 </section>
@@ -104,15 +104,15 @@ A logo for the application or service. This MAY also be the logo of the hosting 
 
 ### <dfn>inLanguage</dfn>
 
-The primary language(s) of the content provided by the service. If given, this MUST be one or more of [[IETFBCP47]].
+Sprache(n) des Hauptangebotes. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String[]` holding one or more language tags</dd>
-    <dt>Values</dt>
-    <dd>[[IETFBCP47]]</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String[]`</dd>
+    <dt>Werte</dt>
+    <dd>[[!BCP47]]</dd>
 </dl>
 
 </section>
@@ -121,12 +121,12 @@ The primary language(s) of the content provided by the service. If given, this M
 
 ### <dfn>description</dfn>
 
-A short description of the application or service.
+Beschreibung des Dienstes.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
     <dd>`String`</dd>
 </dl>
 
@@ -136,15 +136,15 @@ A short description of the application or service.
 
 ### <dfn>serviceType</dfn>
 
-The type(s) of service provided by the application. This MAY be one or more *Service subtype* of [[schema.org]], `Repository`, `Referatory`, `Wiki`, `LMS`.
+Art des Services. KANN einen `Service`-Subtyp von [[schema.org]] enthalten. Die Angabe eigener Werte ist zulässig, ein kontrolliertes Vokabular wird angestrebt.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
     <dd>`String[]`</dd>
-    <dt>Values</dt>
-    <dd><a href="http://schema.org/Service#subtypes">Subtypes of http://schema.org/Service</a>, `Repository`, `Referatory`, `Wiki`, `LMS` or any other</dd>
+    <dt>Werte</dt>
+    <dd><a href="http://schema.org/Service#subtypes">Subtyp von http://schema.org/Service</a>, `Repository`, `Referatory`, `Wiki`, `LMS` oder andere</dd>
 </dl>
 
 </section>
@@ -153,14 +153,14 @@ The type(s) of service provided by the application. This MAY be one or more *Ser
 
 ### <dfn>audience</dfn>
 
-The target audience for the application. If given, this MUST be one or more *Educational Audience Role* of [[LRMI]].
+Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String[]` holding one or more URI</dd>
-    <dt>Values</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String[]` (URI)</dd>
+    <dt>Werte</dt>
     <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
 </dl>
 
@@ -170,15 +170,15 @@ The target audience for the application. If given, this MUST be one or more *Edu
 
 ### <dfn>about</dfn>
 
-The subject(s) or topic(s) of resources provided by the application. This MAY be one or more *Thing subtype* of [[schema.org]].
+Fach/Thema der Inhalte. KANN einen `Thing`-Subtyp von [[schema.org]] enthalten.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String[]` holding one or more URI</dd>
-    <dt>Values</dt>
-    <dd><a href="http://schema.org/Thing#subtypes">Subtypes of http://schema.org/Thing</a> or any other URI</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String[]` (URI)</dd>
+    <dt>Werte</dt>
+    <dd><a href="http://schema.org/Thing#subtypes">Subtyp von http://schema.org/Thing</a> oder andere</dd>
 </dl>
 
 </section>
@@ -187,12 +187,12 @@ The subject(s) or topic(s) of resources provided by the application. This MAY be
 
 ### <dfn>isAccessibleForFree</dfn>
 
-Can the application and it's services be used without authentication?
+Sind Inhalte oder Dienste frei (ohne Authentifizierung) verfügbar?
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
     <dd>`Boolean`</dd>
 </dl>
 
@@ -202,15 +202,15 @@ Can the application and it's services be used without authentication?
 
 ### <dfn>provider</dfn>
 
-The provider of the application. This MUST be one or more JSON object with at least a `type` and `name` property. More properties MAY be given, e. g. `email`, `location`, `url`.
+Anbieter des Dienstes. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dd>
     <dd>`Object[]`</dd>
-    <dt>Values</dt>
-    <dd>Object with at least a `type` and `name` property</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 </dl>
 
 </section>
@@ -219,15 +219,15 @@ The provider of the application. This MUST be one or more JSON object with at le
 
 ### <dfn>startDate</dfn>
 
-The launch date of the application. If given, this MUST conform with [[ISO8601]].
+Launch-Datum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
     <dd>`Date`</dd>
-    <dt>Values</dt>
-    <dd>[[ISO8601]]</dd>
+    <dt>Werte</dt>
+    <dd>[[!ISO8601]]</dd>
 </dl>
 
 </section>
@@ -236,15 +236,15 @@ The launch date of the application. If given, this MUST conform with [[ISO8601]]
 
 ### <dfn>availableChannel</dfn>
 
-This describes the services provided by the application. This MUST be one or more JSON object describing a `ServiceChannel` and `WebAPI` according to [[schema.org]].
+Services, die angeboten werden. MUSS ein oder mehrere JSON-Objekte enthalten, die `ServiceChannel` und `WebAPI` gemäß [[!schema.org]] beschreiben.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
-    <dd>`Object[]` holding one or more `Service` object</dd>
-    <dt>Values</dt>
-    <dd>Object of types <a href="https://schema.org/ServiceChannel">ServiceChannel</a> and <a href="https://schema.org/WebAPI">WebAPI</a></dd>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`Object[]`</dd>
+    <dt>Werte</dt>
+    <dd>Objekt vom Typ <a href="https://schema.org/ServiceChannel">ServiceChannel</a> und <a href="https://schema.org/WebAPI">WebAPI</a></dd>
 </dl>
 
 </section>
@@ -253,13 +253,13 @@ This describes the services provided by the application. This MUST be one or mor
 
 ### <dfn>schemaVersion</dfn>
 
-The schema version of the service card.
+Version des Schemas.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
-    <dd>`String` holding one URI</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`String`</dd>
 </dl>
 
 </section>
@@ -268,15 +268,15 @@ The schema version of the service card.
 
 ### <dfn>dateModified</dfn>
 
-The last modification date of the service card. This MUST conform with [[ISO8601]].
+Letztes Änderungsdatum der Visitenkarte. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>mandatory</dd>
-    <dt>Data Type</dt>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
     <dd>`Date`</dd>
-    <dt>Values</dt>
-    <dd>[[ISO8601]]</dd>
+    <dt>Werte</dt>
+    <dd>[[!ISO8601]]</dd>
 </dl>
 
 </section>
@@ -285,13 +285,13 @@ The last modification date of the service card. This MUST conform with [[ISO8601
 
 ### <dfn>license</dfn>
 
-The license(s) for the resources provided by the application.
+Lizenz(en) der angebotenen Inhalte.
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
     <dt>Date Type</dt>
-    <dd>`String[]` holding one or more URI</dd>
+    <dd>`String[]` (URL)</dd>
 </dl>
 
 </section>
@@ -300,13 +300,13 @@ The license(s) for the resources provided by the application.
 
 ### <dfn>sameAs</dfn>
 
-Related websites for the application.
+Zugehörige Webseiten (GitHub, Docker, ...).
 
 <dl>
-    <dt>Obligation</dt>
-    <dd>optional</dd>
-    <dt>Data Type</dt>
-    <dd>`String[]` holding one or more URL</dd>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String[]` (URL)</dd>
 </dl>
 
 </section>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta charset='utf-8'>
         <title>Service Card for Open Educational Resources</title>
@@ -19,16 +19,6 @@
                 }],
                 format: "markdown",
                 localBiblio: {
-                    "IETFBCP47": {
-                        title: "BCP: 47 - Tags for Identifying Languages",
-                        href: "https://tools.ietf.org/html/bcp47",
-                        publisher: "IETF"
-                    },
-                    "ISO8601": {
-                        title: "ISO 8601 - Date and Time format",
-                        href: "https://www.iso.org/iso-8601-date-and-time-format.html",
-                        publisher: "ISO"
-                    },
                     "LRMI": {
                         title: "LRMI Concept Schemes",
                         href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
@@ -48,7 +38,7 @@
                         href: "https://w3id.org/dini-ag-kim/oer-service-card/latest/"
 //                    }, {
 //                        value: "Permalink zu dieser Version",
-//                       href: "https://w3id.org/dini-ag-kim/oer-service-card/[version]/" // Add [version] when publishing new spec version!
+//                        href: "https://w3id.org/dini-ag-kim/oer-service-card/[version]/" // Add [version] when publishing new spec version!
                     }, {
                         value: "Letzter Entwurf zur Kommentierung",
                         href: "https://w3id.org/dini-ag-kim/oer-service-card/draft/"
@@ -73,42 +63,41 @@
     <body>
         <section id="abstract" data-include="contents/abstract.md"></section>
 
-        <section id="sotd" data-include="contents/sotd.md"></section>
-
         <section id="conformance" data-include="contents/conformance.md"></section>
 
         <section id="technical-spec">
-            <h2>Technical Specification</h2>
+            <h2>Implementierung</h2>
 
             <section id="format" data-include="contents/format.md">
                 <h2>Format</h2>
             </section>
  
             <section id="vocabulary" data-include="contents/vocabulary.md">
-                <h2>Vocabulary</h2>
+                <h2>Vokabular</h2>
             </section>
 
             <section id="examples">
-                <h2>Examples</h2>
+                <h2>Beispiele</h2>
 
                 <section id="full-example">
-                    <h2>Full Example</h2>
+                    <h2>Vollständiges Beispiel</h2>
                     <pre class="example" data-include="examples/full-example.json" data-include-format="text"></pre>
                 </section>
             </section>
         </section>
 
         <section id="schemas">
-            <h2>Metadata Schema</h2>
+            <h2>Validierung</h2>
 
             <section id="json-schema">
                 <h2>JSON Schema</h2>
                 <pre data-include="schemas/service-card.json" data-include-format="text"></pre>
+                <a href="schemas/service-card.json">Link zum Schema</a>
             </section>
         </section>
 
         <section id="glossary" class="appendix" data-include="contents/glossary.md">
-            <h2>Glossary</h2>
+            <h2>Glossar</h2>
         </section>
 
         <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->

@@ -1,36 +1,36 @@
 ## Format
 
-A service card holds general information about an application as well as further information about provided services (e. g. interfaces for search, harvesting, tools).
+Eine Visitenkarte wird durch ein JSON-Objekt repräsentiert. Neben allgemeinen Informationen zur Applikation werden auch die speziellen Services mitgeteilt, die extern nutzbar sind (z. B. Suche, Harvesting, Tools).
 
-A service card MUST be represented by a JSON object. This JSON object MUST have some mandatory properties and MAY have some optional properties described <a href="#vocabulary">below</a>.
+Dieses JSON-Objekt MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#vocabulary">Vokabulars</a> beinhalten.
 
-An application's service card MUST be provided in the format JSON-LD as a standalone JSON file or embedded in the application's homepage.
+Die Visitenkarte einer Applikation MUSS im JSON-LD-Format bereitgestellt werden, entweder als eigenes JSON-Dokument oder eingebettet in die Startseite. Die URL, hinter der sich das Dokument befindet, kann dann abgefragt und die resultierenden Inhalte ausgewertet werden.
 
-If the service card is provided as a standalone JSON file the `Content-Type` header MUST be set to `application/ld+json`:
+Wird die Visitenkarte als JSON-Dokument angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
 
 ```
 Content-Type: application/ld+json
 ```
 
-The service card MUST be referenced in one of the following ways.
+Die Visitenkarte MUSS auf eine der folgenden Arten in die Webseite eingebunden werden:
 
-1. A `script` tag containing the service card's JSON object MUST be placed in the `head` section of the homepage:
+1. Ein `script` Element mit dem JSON der Visitenkarte MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
    ```
     <script type="application/ld+json">[...]</script>
    ```
 
-OR
+ODER
 
-2. A `link` tag referencing the service card's JSON file MUST be placed in the `head` section of the homepage:
+2. Ein `link` Element, das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
    ```
    <link rel="meta" type="application/ld+json" href="[...]" title="Service-Description" />
    ```
 
-OR
+ODER
 
-3. A `Link` header referencing the service card's JSON file MUST be sent along with the homepage:
+3. Ein `Link` Header, der das JSON-Dokument referenziert, MUSS gemeinsam mit der Webseite ausgeliefert werden:
 
    ```
    HTTP/1.1 200 OK

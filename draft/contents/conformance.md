@@ -1,1 +1,0 @@
-skohub-editor
