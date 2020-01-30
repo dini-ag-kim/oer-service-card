@@ -17,7 +17,7 @@ Die Visitenkarte MUSS auf eine der folgenden Arten in die Webseite eingebunden w
 1. Ein `script` Element mit dem JSON der Visitenkarte MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
    ```
-    <script type="application/ld+json">[...]</script>
+   <script type="application/ld+json">[...]</script>
    ```
 
 ODER
