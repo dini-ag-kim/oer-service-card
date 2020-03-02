@@ -8,22 +8,8 @@ verwaltbar werden.
 
 ## Versionen der Spezifikation
 
-Die aktuelle Fassung der Spezifikation findet sich unter folgendem Permalink:
-
-[`https://w3id.org/dini-ag-kim/oer-service-card/latest/`][latest_version]
-
-Dieser Permalink führt immer zur jeweils aktuellsten publizierten Version der
-Spezifikation. Zur Implementierung der Spezifikation sollte immer diese Fassung
-herangezogen werden.
-
-Ältere Fassungen der Spezifikation und konkrete Versionen können ebenfalls über
-Permalinks referenziert werden. Dazu muss die Pfadangabe `latest` im obigen Link
-durch die jeweilige Versionnummer ersetzt werden.
-
-Bisher wurden folgende Versionen veröffentlicht:
-
-- [`latest`][latest_version] (Aktuelle Version vom 16.01.2020)
-- [`20190309`][20190309] (Version vom 09.03.2019)
+Diese Spezifikation ist noch in der Entwicklung, es gibt also nur den unten verlinkten 
+Entwurf.
 
 ## Mitwirkung
 
