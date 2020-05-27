@@ -1,4 +1,4 @@
-# Service Card for Open Educational Resources
+# Visitenkarte für OER-Dienste
 
 Mit dieser Harmonisierungsempfehlung sollen Lerninhalte-Services besser auffindbar
 und nutzbar werden, bspw. innerhalb einer vernetzten Infrastruktur. Lerninhalte,
