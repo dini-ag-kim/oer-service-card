@@ -9,8 +9,8 @@ Dieses Dokument empfiehlt die Implementierung elektronischer Visitenkarten an
 Die Initiative für diese Harmonisierung entstand in Kooperationen von IT-Expert\*innen im BMBF-Förderprogramm OERinfo. Dieses Video gibt in 4 Minuten einen Überblick zu von Expert\*innen empfohlenen Infrastrukturentwicklungen: [OER-förderliche Infrastrukturen](https://www.youtube.com/watch?v=6iFxaZatB2c)
 
 <p class="copyright">
-    <img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+    <img alt="CC-BY" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
     Dieses Werk ist lizenziert unter
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-    Creative Commons Namensnennung/Weitergabe unter gleichen Bedingungen 4.0</a>.
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Namensnennung 4.0</a>.
 </p>
